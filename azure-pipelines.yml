@@ -8,13 +8,15 @@ trigger:
 
 pool: mynewcomp
 
+
+
+steps:
+
 - task: JavaToolInstaller@0
   inputs:
     versionSpec: '17'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-
-steps:
 - task: Maven@3
   inputs:
     mavenPomFile: 'pom.xml'

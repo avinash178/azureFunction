@@ -18,13 +18,15 @@ steps:
     jdkSourceOption: 'LocalDirectory'
     jdkFile: 'C:\jdk1.8.0_172\jdk1.8.0_172 (1).7z'
     cleanDestinationDirectory: false
-- task: Maven@3
+- task: Maven@4
   inputs:
     mavenPomFile: 'pom.xml'
+    goals: 'install'
     mavenOptions: '-Xmx3072m'
+    mavenVersionOption: 'Default'
+    mavenAuthenticateFeed:false
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '18'
     jdkArchitectureOption: 'x64'
     publishJUnitResults: true
     testResultsFiles: '**/surefire-reports/TEST-*.xml'
-    goals: 'package'

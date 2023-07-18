@@ -16,7 +16,7 @@ steps:
     versionSpec: '18'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'LocalDirectory'
-    jdkFile: 'C:\jdk1.8.0_172\bin\java.exe'
+    jdkFile: 'C:\jdk1.8.0_172\jdk1.8.0_172 (1).7z'
     cleanDestinationDirectory: false
 - task: Maven@3
   inputs:
